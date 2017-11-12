@@ -2,7 +2,7 @@
 
 	.controller("MathGameController", ["$rootScope", "$scope", function ($rootScope, $scope) {
 
-		//$scope.questions = [];
+		$scope.questions = [];
 		//$scope.level1Questions = [];
 
 		$scope.isStartPage = true;
@@ -12,17 +12,22 @@
 
 
 		(function () {
-			//$scope.questions = $rootScope.level1Questions;
 
-			//for (var i = 0; i < $rootScope.allQuestions.length; i++) {
-			//	$scope.level1Questions.push($rootScope.allQuestions[i]);
-			//}
-		});
+			//$scope.questions = $rootScope.allQuestions;
+			for (var i = 0; i < $rootScope.allQuestions.length; i++) {
+				$scope.questions.push($rootScope.allQuestions[i]);
+			}
+
+		})();
 
 		$scope.addPlayer = function () {
 
 			$rootScope.players.push($scope.currentPlayer);
 			$scope.isStartPage = false;
+		}
+
+		$scope.updateAnswer=function(index, answer) {
+			$scope.questions[index].yourAns = answer;
 		}
 
 		$scope.finishGame = function () {

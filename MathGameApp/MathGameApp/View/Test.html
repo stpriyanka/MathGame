@@ -31,10 +31,12 @@
 				</span>
 			</div>
 		</div>
-		<br />
-		<br />
+	</div>
 
-		<p class="h2"> Level 1</p>
+	<br />
+	<br />
+
+	<!--<p class="h2"> Level 1</p>
 
 		<div class="alert alert-info" role="alert">
 			<strong> Your score is {{currentScore}} out of {{itemLists.length}} </strong>
@@ -69,7 +71,7 @@
 				</tbody>
 			</table>
 		</div>
-	</div>
+	</div>-->
 
 
 	<div ng-if="!isStartPage" style="margin: 100px;">
@@ -88,16 +90,18 @@
 
 						<td>{{question.round}}</td>
 						<td>{{question.equation}}</td>
-						<td>
-							<div class="col-md-6">
-
-								<input ng-show="item.IsSelectNoVisible" ng-click="myAnswer($index,'NO')" type="submit" value="NO" />
-								<input ng-show="item.IsSelectNoVisible" ng-click="myAnswer($index,'YES')" type="submit" value="YES" />
-
-								<p>{{item.userAns}}</p>
-							</div>
+						<td ng-if="question.yourAns==null">
+								<button ng-click="updateAnswer($index,true)">True</button>
+								<button ng-click="updateAnswer($index,false)">False</button>
 						</td>
-						<td></td>
+						<td ng-if="question.yourAns!=null">
+							{{question.yourAns}}
+						</td>
+						<td ng-if="question.yourAns!=null">
+							<span ng-if="question.yourAns==question.result">pass</span>
+							<span ng-if="question.yourAns!=question.result">fail</span>
+
+						</td>
 					</tr>
 				</tbody>
 			</table>

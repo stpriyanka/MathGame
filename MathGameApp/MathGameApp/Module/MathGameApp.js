@@ -7,41 +7,31 @@
 			   [{
 			   	round: 1,
 			   	equation: "10*2=20",
-			   	IsSelectYesVisible: true,
-			   	IsSelectNoVisible: true,
-			   	userAns: "",
+			   	userAns: null,
 			   	result: true
 			   },
 			   {
 			   	round: 2,
 			   	equation: "10-2=5",
-			   	IsSelectYesVisible: true,
-			   	IsSelectNoVisible: true,
-			   	userAns: "",
+			   	userAns: null,
 			   	result: false
 			   },
 			   {
 			   	round: 3,
 			   	equation: "16/8=2",
-				IsSelectYesVisible: true,
-			   	IsSelectNoVisible: true,
-			   	userAns: "",
+			   	userAns: null,
 			   	result: true
 			   },
 			   {
 			   	round: 4,
 			   	equation: "10-2=8",
-			   	IsSelectYesVisible: true,
-			   	IsSelectNoVisible: true,
-			   	userAns: "",
+			   	userAns: null,
 			   	result: true
 			   },
 			   {
 			   	round: 5,
 			   	equation: "4*6=16",
-			   	IsSelectYesVisible: true,
-			   	IsSelectNoVisible: true,
-			   	userAns: "",
+			   	userAns: null,
 			   	result: false
 			   }];
 
