@@ -1,0 +1,64 @@
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\roslyn\csc.exe
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\roslyn\vbc.exe
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\roslyn\VBCSCompiler.exe
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\MathGameApp.dll.config
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\MathGameApp.dll
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\MathGameApp.pdb
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\Microsoft.AI.Web.dll
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\Microsoft.ApplicationInsights.dll
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\Microsoft.AI.Web.xml
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\Microsoft.ApplicationInsights.xml
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\obj\Debug\MathGameApp.dll
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\obj\Debug\MathGameApp.pdb
+C:\Users\priyanka\Documents\Visual Studio 2015\Projects\MathGameApp\MathGameApp\obj\Debug\MathGameApp.csprojResolveAssemblyReference.cache
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\roslyn\csc.exe
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\roslyn\System.Collections.Immutable.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\roslyn\System.Reflection.Metadata.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\roslyn\vbc.exe
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\roslyn\VBCSCompiler.exe
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\roslyn\VBCSCompiler.exe.config
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\MathGameApp.dll.config
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\MathGameApp.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\MathGameApp.pdb
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.AI.Agent.Intercept.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.AI.DependencyCollector.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.AI.Web.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.AI.WindowsServer.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.ApplicationInsights.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.AI.DependencyCollector.xml
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.AI.Web.xml
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.AI.WindowsServer.xml
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.ApplicationInsights.xml
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\obj\Debug\MathGameApp.csprojResolveAssemblyReference.cache
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\obj\Debug\MathGameApp.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\obj\Debug\MathGameApp.pdb

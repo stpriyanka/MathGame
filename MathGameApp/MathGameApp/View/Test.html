@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>MATH GAME APPLICATION </title>
+
+	<meta charset="utf-8" />
+	<link href="../Content/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body ng-app="MathGameModule" ng-controller="MathGameController">
+	<p class="h2">MATH GAME APPLICATION</p>
+	<br />
+	<br />
+	<br />
+
+	<div class="alert alert-info" role="alert">
+		<strong ng-show="players.length <10"> Total players playing now {{players.length}}</strong>
+	</div>
+
+	<div ng-if="isStartPage" style="margin: 100px;">
+		<br />
+		<p ng-if="players.length==10">
+			Please wait until total is less than 10 players
+		</p>
+
+		<div class="col-md-6">
+			<div class="input-group">
+				<input type="text" class="form-control" ng-model="currentPlayer" placeholder="Enter your name to play..">
+				<span class="input-group-btn">
+					<button class="btn btn-success" type="button" ng-if="currentPlayer && players.length<10" ng-click="addPlayer()">Go!</button>
+				</span>
+			</div>
+		</div>
+		<br />
+		<br />
+
+		<p class="h2"> Level 1</p>
+
+		<div class="alert alert-info" role="alert">
+			<strong> Your score is {{currentScore}} out of {{itemLists.length}} </strong>
+		</div>
+
+		<div class="container">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Round</th>
+						<th>Equation</th>
+						<th>Your Answer</th>
+						<th>Result</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in itemLists">
+						<td>{{item.id}}</td>
+						<td>{{item.equation}}</td>
+						<td>
+							{{item.userAns}}
+							<div>
+								<input ng-show="item.IsSelectNoVisible" ng-click="selectAnswer($index,'NO')" type="submit" value="No" />
+								<input ng-show="item.IsSelectYesVisible" ng-click="selectAnswer($index,'YES')" type="submit" value="Yes" />
+							</div>
+						</td>
+						<td>
+							{{item.yourResult}}
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+
+	<div ng-if="!isStartPage" style="margin: 100px;">
+		<div class="container">
+			<table class="table table-responsive">
+				<thead>
+					<tr>
+						<th>Round</th>
+						<th>Equation</th>
+						<th>Your answer</th>
+						<th>Result</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="question in questions">
+
+						<td>{{question.round}}</td>
+						<td>{{question.equation}}</td>
+						<td>
+							<div class="col-md-6">
+
+								<input ng-show="item.IsSelectNoVisible" ng-click="myAnswer($index,'NO')" type="submit" value="NO" />
+								<input ng-show="item.IsSelectNoVisible" ng-click="myAnswer($index,'YES')" type="submit" value="YES" />
+
+								<p>{{item.userAns}}</p>
+							</div>
+						</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<span class="input-group-btn">
+			<button class="btn btn-default" type="button" ng-click="finishGame()">Leave Game</button>
+		</span>
+	</div>
+
+</body>
+
+</html>
+<script src="../scripts/angular.min.js"></script>
+<script src="../scripts/jquery-3.2.1.min.js"></script>
+<script src="../scripts/bootstrap.min.js"></script>
+<script src="../Module/MathGameApp.js"></script>
+<script src="../Controller/ControllersModule.js"></script>
+<script src="../Service/TestService.js"></script>
