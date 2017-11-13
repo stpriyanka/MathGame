@@ -8,6 +8,9 @@
 
 </head>
 <body ng-app="MathGameModule" ng-controller="MathGameController">
+
+	<!--<ul id="playerList"></ul>-->
+
 	<p class="h2">MATH GAME APPLICATION</p>
 	<br />
 	<br />
@@ -25,12 +28,18 @@
 
 		<div class="col-md-6">
 			<div class="input-group">
-				<input type="text" class="form-control" ng-model="currentPlayer" placeholder="Enter your name to play..">
+				<input id="username" type="text" class="form-control" placeholder="Enter your name to play..">
 				<span class="input-group-btn">
-					<button class="btn btn-success" type="button" ng-if="currentPlayer && players.length<10" ng-click="addPlayer()">Go!</button>
+					<button id="sendname" class="btn btn-success" type="button">Go!</button>
 				</span>
 			</div>
 		</div>
+		<br />
+		<div class="list-group col-md-8">
+			<p class="h2">Online Players</p>
+			<ul id="playerList" class="list-group-item active"></ul>
+		</div>
+
 	</div>
 
 	<br />
@@ -38,41 +47,78 @@
 
 	<!--<p class="h2"> Level 1</p>
 
-		<div class="alert alert-info" role="alert">
-			<strong> Your score is {{currentScore}} out of {{itemLists.length}} </strong>
-		</div>
+	<div class="alert alert-info" role="alert">
+		<strong> Your score is {{currentScore}} out of {{itemLists.length}} </strong>
+	</div>
 
-		<div class="container">
-			<table class="table">
-				<thead>
-					<tr>
-						<th>Round</th>
-						<th>Equation</th>
-						<th>Your Answer</th>
-						<th>Result</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr ng-repeat="item in itemLists">
-						<td>{{item.id}}</td>
-						<td>{{item.equation}}</td>
-						<td>
-							{{item.userAns}}
-							<div>
-								<input ng-show="item.IsSelectNoVisible" ng-click="selectAnswer($index,'NO')" type="submit" value="No" />
-								<input ng-show="item.IsSelectYesVisible" ng-click="selectAnswer($index,'YES')" type="submit" value="Yes" />
-							</div>
-						</td>
-						<td>
-							{{item.yourResult}}
-						</td>
-					</tr>
+	<div class="container">
+		<table class="table">
+			<thead>
+			<tr>
+				<th>Round</th>
+				<th>Equation</th>
+				<th>Your Answer</th>
+				<th>Result</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr ng-repeat="item in itemLists">
+				<td>{{item.id}}</td>
+				<td>{{item.equation}}</td>
+				<td>
+					{{item.userAns}}
+					<div>
+						<input ng-show="item.IsSelectNoVisible" ng-click="selectAnswer($index,'NO')" type="submit" value="No"/>
+						<input ng-show="item.IsSelectYesVisible" ng-click="selectAnswer($index,'YES')" type="submit" value="Yes"/>
+					</div>
+				</td>
+				<td>
+					{{item.yourResult}}
+				</td>
+			</tr>
 
-				</tbody>
-			</table>
-		</div>
+			</tbody>
+		</table>
+	</div>
 	</div>-->
+	<script src="../scripts/jquery-3.2.1.min.js"></script>
+	<script src="../scripts/jquery.signalR-2.2.2.min.js"></script>
+	<script src="/signalr/hubs"></script>
 
+	<script type="text/javascript">
+		$(function () {
+
+			var connection = $.hubConnection();
+			connection.logging = true;
+			connection.start();
+			console.log(connection);
+
+			// Declare a proxy to reference the hub.
+			var chat = $.connection.chatHub;
+
+			// Create a function that the hub can call to broadcast messages.
+			chat.client.broadcastMessage = function (name) {
+				$('#playerList').append('<li><strong>' + name + '</li>');
+			};
+
+
+			// Start the connection.
+			$.connection.hub.start().done(function () {
+				console.log($.connection.hub.id);
+				$('#sendname').click(function () {
+
+					var name = $('#username').val();
+
+					$.connection.hub.qs = { name };
+					// Call the Send method on the hub.
+					chat.server.send(name);
+
+					console.log(name);
+					$('#username').val('').focus();
+				});
+			});
+		});
+	</script>
 
 	<div ng-if="!isStartPage" style="margin: 100px;">
 		<div class="container">
@@ -91,31 +137,35 @@
 						<td>{{question.round}}</td>
 						<td>{{question.equation}}</td>
 						<td ng-if="question.yourAns==null">
-								<button ng-click="updateAnswer($index,true)">True</button>
-								<button ng-click="updateAnswer($index,false)">False</button>
+							<button ng-click="updateAnswer($index,true)">True</button>
+							<button ng-click="updateAnswer($index,false)">False</button>
 						</td>
 						<td ng-if="question.yourAns!=null">
 							{{question.yourAns}}
 						</td>
 						<td ng-if="question.yourAns!=null">
-							<span ng-if="question.yourAns==question.result">pass</span>
-							<span ng-if="question.yourAns!=question.result">fail</span>
+							<span ng-if="question.yourAns==question.result">OK</span>
+							<span ng-if="question.yourAns!=question.result">Failed</span>
 
 						</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
+
+
 		<span class="input-group-btn">
 			<button class="btn btn-default" type="button" ng-click="finishGame()">Leave Game</button>
 		</span>
 	</div>
 
+
+
 </body>
 
 </html>
 <script src="../scripts/angular.min.js"></script>
-<script src="../scripts/jquery-3.2.1.min.js"></script>
+<!--<script src="../scripts/jquery-3.2.1.min.js"></script>-->
 <script src="../scripts/bootstrap.min.js"></script>
 <script src="../Module/MathGameApp.js"></script>
 <script src="../Controller/ControllersModule.js"></script>

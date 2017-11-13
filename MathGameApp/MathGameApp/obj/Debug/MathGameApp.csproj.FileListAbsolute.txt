@@ -62,3 +62,17 @@ C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.CodeDom.Pro
 C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\obj\Debug\MathGameApp.csprojResolveAssemblyReference.cache
 C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\obj\Debug\MathGameApp.dll
 C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\obj\Debug\MathGameApp.pdb
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.Owin.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.Owin.Security.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Newtonsoft.Json.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Owin.dll
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.Owin.xml
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.Owin.Security.xml
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Newtonsoft.Json.xml
+C:\github\MathGameApp\MathGame\MathGameApp\MathGameApp\bin\Microsoft.Web.Infrastructure.dll
