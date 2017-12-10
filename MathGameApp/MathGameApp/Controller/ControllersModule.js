@@ -26,8 +26,11 @@
 			$scope.isStartPage = false;
 		}
 
-		$scope.updateAnswer=function(index, answer) {
+		$scope.updateAnswer = function (index, answer) {
 			$scope.questions[index].yourAns = answer;
+
+			//p();
+
 		}
 
 		$scope.finishGame = function () {
@@ -43,7 +46,7 @@
 		}
 
 
-	
+
 
 		$scope.selectAnswer = function (index, ans) {
 			var item = $scope.itemLists[index];
@@ -66,8 +69,7 @@
 				//current player score update
 				$scope.currentScore++;
 			}
-			else
-			{
+			else {
 				item.yourResult = "FAILED";
 			}
 		};

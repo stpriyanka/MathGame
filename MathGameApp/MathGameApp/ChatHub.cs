@@ -11,35 +11,59 @@ namespace MathGameApp
 	{
 		public void Send(string name)
 		{
-			var u = new Users()
-			{
-				ConnectionId = Context.ConnectionId,
-				UserName = name
-			};
-			CurrentConnections.Add(u);
+			string connectionId = Context.ConnectionId;
 
-			// Call the broadcastMessage method to update clients.
+			string userName = name;
+
+			if (userName != null && userName.Length >= 1)
+			{
+				var u = new Users()
+				{
+					ConnectionId = connectionId,
+					UserName = userName
+				};
+
+				if (u.ConnectionId != null && !CurrentConnections.Contains(u))
+				{
+					CurrentConnections.Add(u);
+				}
+			}
+			//Clients.AllExcept(CurrentConnections.Where(x => x.ConnectionId == Context.ConnectionId).Select(x => x.ConnectionId).FirstOrDefault());
 			Clients.All.broadcastMessage(name);
+			Clients.Caller.renderGame();
+		}
+
+
+		public void CloseGame(string connectionId)
+		{
+			var user = CurrentConnections.FirstOrDefault(x => x.ConnectionId == connectionId);
+			CurrentConnections.Remove(user);
+
+			Clients.Caller.leaveGame();
 		}
 
 		readonly List<Users> CurrentConnections = new List<Users>();
 
 		public override Task OnConnected()
 		{
+
+
 			return base.OnConnected();
 		}
 
-		public override Task OnDisconnected(bool stopCalled)
+		public override Task OnDisconnected(bool stopCalled = false)
 		{
-			//var connection = CurrentConnections.FirstOrDefault(x => x.ConnectionId == Context.ConnectionId);
 
-			//if (connection != null)
-			//{
-			//	CurrentConnections.Remove(connection);
-			//}
+			if (stopCalled)
+			{
+				CloseGame(Context.ConnectionId);
+			}
 
-			return base.OnDisconnected(true);
+		
+
+			return OnDisconnected(stopCalled);
 		}
+
 	}
 
 	public class Users

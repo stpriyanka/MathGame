@@ -34,8 +34,9 @@
 				</span>
 			</div>
 		</div>
-		<br />
-		<div class="list-group col-md-8">
+		<br/>
+
+		<div class="list-group col-md-4">
 			<p class="h2">Online Players</p>
 			<ul id="playerList" class="list-group-item active"></ul>
 		</div>
@@ -85,6 +86,16 @@
 	<script src="../scripts/jquery.signalR-2.2.2.min.js"></script>
 	<script src="/signalr/hubs"></script>
 
+
+
+
+	<script src="../scripts/angular.min.js"></script>
+	<!--<script src="../scripts/jquery-3.2.1.min.js"></script>-->
+	<script src="../scripts/bootstrap.min.js"></script>
+	<script src="../Module/MathGameApp.js"></script>
+	<script src="../Controller/ControllersModule.js"></script>
+	<script src="../Service/TestService.js"></script>
+
 	<script type="text/javascript">
 		$(function () {
 
@@ -99,28 +110,53 @@
 			// Create a function that the hub can call to broadcast messages.
 			chat.client.broadcastMessage = function (name) {
 				$('#playerList').append('<li><strong>' + name + '</li>');
+				$('#gameload').val(false);
+
+			};
+
+			//render math game section and hide user input
+			chat.client.renderGame = function () {
+				$('#gameload').show();
+				$('#sendname').hide();
+				$('#username').hide();
+			};
+
+
+			chat.client.leaveGame = function () {
+				$('#gameload').hide();
+				$('#username').show();
 			};
 
 
 			// Start the connection.
 			$.connection.hub.start().done(function () {
 				console.log($.connection.hub.id);
+
 				$('#sendname').click(function () {
 
 					var name = $('#username').val();
 
-					$.connection.hub.qs = { name };
 					// Call the Send method on the hub.
 					chat.server.send(name);
 
 					console.log(name);
 					$('#username').val('').focus();
 				});
+
+				$('#leaveGame').click(function () {
+					chat.server.closeGame(true);
+				});
+
+				//var p= function () {
+				$('#yes').click(function () {
+					chat.server.send(name);
+				});
+
 			});
 		});
 	</script>
 
-	<div ng-if="!isStartPage" style="margin: 100px;">
+	<div id="gameload" style="margin: 100px;display: none">
 		<div class="container">
 			<table class="table table-responsive">
 				<thead>
@@ -137,11 +173,16 @@
 						<td>{{question.round}}</td>
 						<td>{{question.equation}}</td>
 						<td ng-if="question.yourAns==null">
-							<button ng-click="updateAnswer($index,true)">True</button>
+							<button id="yes" ng-click="updateAnswer($index,true)">True</button>
 							<button ng-click="updateAnswer($index,false)">False</button>
 						</td>
-						<td ng-if="question.yourAns!=null">
-							{{question.yourAns}}
+						<td id="whenOneUserAnswer">
+							<div ng-if="question.yourAns!=null">
+								{{question.yourAns}}
+							</div>
+						</td>
+						<td >
+
 						</td>
 						<td ng-if="question.yourAns!=null">
 							<span ng-if="question.yourAns==question.result">OK</span>
@@ -155,7 +196,8 @@
 
 
 		<span class="input-group-btn">
-			<button class="btn btn-default" type="button" ng-click="finishGame()">Leave Game</button>
+			<!--<button class="btn btn-default" type="button" ng-click="finishGame()">Leave Game</button>-->
+			<input id="leaveGame" class="btn btn-default" type="button">Leave Game/>
 		</span>
 	</div>
 
@@ -164,9 +206,3 @@
 </body>
 
 </html>
-<script src="../scripts/angular.min.js"></script>
-<!--<script src="../scripts/jquery-3.2.1.min.js"></script>-->
-<script src="../scripts/bootstrap.min.js"></script>
-<script src="../Module/MathGameApp.js"></script>
-<script src="../Controller/ControllersModule.js"></script>
-<script src="../Service/TestService.js"></script>
